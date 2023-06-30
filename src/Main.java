@@ -1,10 +1,11 @@
-import Decorator.CloudStream;
-import Decorator.EncryptedCloudStream;
+import Adapter.CaramelAdapter;
+import Adapter.Filter;
+import Adapter.Image;
+import Adapter.avaFilters.CaramelFilter;
 
 public class Main {
     public static void main (String[] args){
-        CloudStream cloudStream = new CloudStream();
-        EncryptedCloudStream encrypted = new EncryptedCloudStream(cloudStream);
-        encrypted.write("Molindu123");
+        Filter caramel = new CaramelAdapter(new CaramelFilter());
+        caramel.apply(new Image());
     }
 }
