@@ -1,10 +1,10 @@
 import Decorator.CloudStream;
-import Decorator.Encrypted;
+import Decorator.EncryptedCloudStream;
 
 public class Main {
     public static void main (String[] args){
         CloudStream cloudStream = new CloudStream();
-        Encrypted encrypted = new Encrypted(cloudStream);
-        cloudStream.write("Molindu123");
+        EncryptedCloudStream encrypted = new EncryptedCloudStream(cloudStream);
+        encrypted.write("Molindu123");
     }
 }
