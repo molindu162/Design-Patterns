@@ -1,11 +1,10 @@
-import Adapter.CaramelAdapter;
-import Adapter.Filter;
-import Adapter.Image;
-import Adapter.avaFilters.CaramelFilter;
+import Composite.Group;
+import Composite.Shape;
+import FacadePattern.NotificationService;
 
 public class Main {
     public static void main (String[] args){
-        Filter caramel = new CaramelAdapter(new CaramelFilter());
-        caramel.apply(new Image());
+        NotificationService service = new NotificationService();
+        service.send();
     }
 }
